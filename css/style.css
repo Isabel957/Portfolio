@@ -1,0 +1,80 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-size: 16px;
+  font-family: sans-serif;
+  color: #232323;
+}
+.container{
+  width: 90%;
+  margin: 0 auto;
+  margin: 20px 0;
+}
+h2{
+  font-size: 2.5rem;
+  text-align: center;
+}
+.information{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.information img{
+  width: 30%;
+}
+.information p{
+  width: 60%;
+  line-height: 25px;
+  letter-spacing: 1px;
+}
+.information p span{
+  font-weight: 600;
+}
+.projects{
+  display: flex;
+  justify-content: center;
+}
+.card{
+  background: #007DB7;
+  width: 300px;
+  padding: 30px 10px 10px 10px;
+  margin: 40px auto;
+  border-radius: 5px;
+  color: #fff;
+  position: relative;
+  text-align: center;
+}
+.card a{
+  color: #fff;
+  display: inline-block;
+  font-size: 25px;
+}
+.card .icon-link{
+  background: #007DB7;
+  border: 5px solid #fff;
+  padding: 15px;
+  border-radius: 50%;
+  position: absolute;
+  top: -35px;
+  right: 115px;
+  transition: all 0.3s linear;
+}
+.card .icon-link:hover{
+
+  background: #081D6A;
+}
+.card .icon-github{
+  font-size: 35px;
+  margin: 10px 0 0 0;
+  transition: all 0.3s linear;
+}
+.card .icon-github:hover{
+  color: #081D6A;
+}
+.card p{
+  text-transform: uppercase;
+}
