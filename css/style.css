@@ -1,80 +1,250 @@
+:root{
+    --blue:#009CDA;
+}
+
 *{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    transition: all .2s linear;
+    text-transform: capitalize;
+    box-sizing: border-box;
+}
+
+*::selection{
+    background:var(--blue);
+    color:#fff;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
 }
 
 body{
-  font-size: 16px;
-  font-family: sans-serif;
-  color: #232323;
+    overflow-x: hidden;
 }
-.container{
+
+.btn{
+    font-size: 2rem;
+    padding:.7rem 3.5rem;
+    border-radius: 5rem;
+    color:#fff;
+    background:var(--blue);
+    margin-top: 1rem;
+    box-shadow: 0 .3rem .5rem rgba(0,0,0,.3);
+    cursor: pointer;
+    border:none;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+}
+
+.btn::before{
+    content: '';
+    position: absolute;
+    top:0; right: 0;
+    height:100%;
+    width:0%;
+    background:#333;
+    z-index: -1;
+    transition: .2s linear;
+}
+
+.btn:hover::before{
+    left: 0;
+    width:100%;
+}
+
+.heading{
+    padding:.5rem 2rem;
+    font-size: 2rem;
+    background:rgba(0,0,0,.1);
+    color:var(--blue);
+    display: inline-block;
+    margin:1rem 0;
+}
+
+.title{
+    font-size: 4rem;
+    color:#333;
+    padding:0 1rem;
+    text-align: center;
+}
+
+header{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top:0; left: 0;
+    z-index: 1000;
+    padding:2rem 7%;
+    background:var(--blue);
+}
+
+header .logo{
+    font-size: 2.5rem;
+    color:#fff;
+}
+
+header .logo i{
+    padding:0 .5rem;
+}
+
+header .navbar ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+
+header .navbar ul li a{
+    font-size: 2rem;
+    margin-left: 2rem;
+    color:#fff;
+    position: relative;
+}
+
+header .navbar ul li a::before{
+    content: '';
+    position: absolute;
+    bottom:-.5rem; right:0;
+    width:0%;
+    height:.2rem;
+    background:#fff;
+    transition: .2s linear;
+}
+
+header .navbar ul li a.active::before,
+header .navbar ul li a:hover::before{
+    left:0;
+    width:100%;
+}
+
+header #menu{
+    font-size: 3rem;
+    color:#fff;
+    cursor: pointer;
+    display: none;
+}
+/*Section Home*/
+.home{
   width: 90%;
   margin: 0 auto;
-  margin: 20px 0;
 }
-h2{
-  font-size: 2.5rem;
-  text-align: center;
-}
-.information{
+.home .presentation{
+  margin-top: 100px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
 }
-.information img{
-  width: 30%;
+.presentation .photo{
+  width: 35%;
 }
-.information p{
+.photo img{
+  width: 100%;
+}
+.text-presentation{
   width: 60%;
-  line-height: 25px;
-  letter-spacing: 1px;
 }
-.information p span{
-  font-weight: 600;
+.text-presentation .welcome{
+  font-size: 20px;
+  font-weight: 100;
+  text-transform: uppercase;
+
 }
+.text-presentation .name{
+  font-size: 40px;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+.text{
+  font-style: normal;
+  color: #081D6A;
+}
+.icons{
+  font-size: 20px;
+}
+.icons a{
+  display: inline-block;
+  margin-right: 5px;
+  margin-top: 10px;
+  padding: 5px 8px;
+  color: #081D6A;
+  border-radius: 50%;
+  border: 2px solid #081D6A
+}
+.icons a:hover{
+  color: #fff;
+  background: #081D6A;
+  border: 2px solid #081D6A
+}
+/*section projects*/
 .projects{
+  background: #009CDA;
+  margin: 100px 0 0 0;
+}
+.projects h2{
+  text-align: center;
+  color: #fff;
+  font-size: 35px;
+  padding: 10px;
+  text-transform: uppercase;
+
+}
+.cards{
   display: flex;
   justify-content: center;
 }
 .card{
-  background: #007DB7;
+  background: #fff;
   width: 300px;
   padding: 30px 10px 10px 10px;
   margin: 40px auto;
   border-radius: 5px;
-  color: #fff;
+  color: #081D6A;
   position: relative;
   text-align: center;
 }
+.card p{
+  font-size: 16px;
+  text-transform: capitalize;
+}
 .card a{
-  color: #fff;
-  display: inline-block;
-  font-size: 25px;
+  color: #007DB7;
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
 }
-.card .icon-link{
-  background: #007DB7;
-  border: 5px solid #fff;
-  padding: 15px;
-  border-radius: 50%;
-  position: absolute;
-  top: -35px;
-  right: 115px;
-  transition: all 0.3s linear;
+.card .sitio:hover{
+  color: #081D6A;
 }
-.card .icon-link:hover{
 
-  background: #081D6A;
-}
 .card .icon-github{
-  font-size: 35px;
+  font-size: 25px;
   margin: 10px 0 0 0;
   transition: all 0.3s linear;
+  color: #007DB7;
 }
 .card .icon-github:hover{
   color: #081D6A;
 }
-.card p{
-  text-transform: uppercase;
+/*Media queries*/
+@media (max-width: 630px) {
+  .presentation{
+    flex-direction: column;
+    text-align: center;
+  }
+  .presentation .text-presentation{
+    width: 90%;
+  }
+  .projects{
+    margin-top: 50px;
+  }
+  .cards{
+    flex-direction: column;
+  }
 }

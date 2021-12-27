@@ -1,39 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-      <link rel="stylesheet" href="./css/style.css">
-    <title>Mi portafolio</title>
-</head>
-<body>
-    <div class="container">
-      <h2>About Me</h2>
-      <div class="information">
-        <img src="images/photo.png">
-        <p>¡Hola👋! Mi nombre es <span>Isabel</span>, tengo 21 años y soy una apasionada del <span>desarrollo web</span>, me encanta aprender
-          cosas nuevas cada día y nunca me canso de practicar todo lo que aprendo. Soy egresada de la carrera de Computación
-          y estoy en el camino de adentrarme y trabajar en el rubro de tecnología como <span>desarrolladora Front-End</span>.
-        </p>
-      </div>
 
-      <h2>Projects</h2>
-      <div class="projects">
-        <div class="card">
-          <a href="https://isabel957.github.io/LIM016-data-lovers" target="_blank"><i class="fas fa-link icon-link"></i></a>
-          <p>Ghibli Corner</p>
-          <a href="https://github.com/Isabel957/LIM016-data-lovers" target="_blank"><i
-              class="fab fa-github icon-github"></i></a>
-        </div>
-        <div class="card">
-          <a href="https://isabel957.github.io/cesar/" target="_blank"><i class="fas fa-link icon-link"></i></a>
-          <p>Cifrado César</p>
-          <a href="https://github.com/Isabel957/cesar" target="_blank"><i class="fab fa-github icon-github"></i></a>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complete Responsive Product Landing Page Website Design Tutorial</title>
+
+  <!-- google fonts cdn link  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,700;1,300&display=swap"
+    rel="stylesheet">
+
+  <!-- font awesome cdn link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+  <!-- custom css file link  -->
+  <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+
+  <!-- heading section starts  -->
+
+  <header>
+
+    <a href="#" class="logo"><i class="fas fa-laptop-code"></i>KITH</a>
+
+    <div id="menu" class="fas fa-bars"></div>
+
+    <nav class="navbar">
+      <ul>
+        <li><a class="active" href="#home">home</a></li>
+        <li><a href="#projects">projects</a></li>
+        <!--<li><a href="#features">features</a></li>
+            <li><a href="#product">product</a></li>
+            <li><a href="#contact">contact</a></li>
+            <li><a href="#faq">FAQ</a></li>-->
+      </ul>
+    </nav>
+
+  </header>
+
+  <section class="home" id="home">
+    <div class="presentation">
+      <div class="photo">
+        <img src="./images/isa.png" alt="photo frontend developer">
+      </div>
+      <div class="text-presentation">
+        <p class="welcome">bienvenid@ a mi página web</p>
+        <p class="name">soy <span class="typed"></span></p>
+        <div class="icons">
+          <a href="https://www.linkedin.com/in/isabel-tello-huaripata/" target="_blank"><i
+              class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/Isabel957" target="_blank"><i class="fab fa-github"></i></a>
         </div>
       </div>
     </div>
+
+  </section>
+
+  <section class="projects" id="projects">
+    <h2>projects</h2>
+    <div class="cards">
+      <div class="card">
+        <p>Ghibli Corner</p>
+        <a href="https://isabel957.github.io/LIM016-data-lovers" target="_blank" class="sitio">Ir al sitio <i
+            class="fas fa-arrow-right"></i></a>
+        <a href="https://github.com/Isabel957/LIM016-data-lovers" target="_blank"><i
+            class="fab fa-github icon-github"></i></a>
+      </div>
+      <div class="card">
+        <p>Cifrado César</p>
+        <a href="https://isabel957.github.io/cesar/" target="_blank" class="sitio">Ir al sitio <i
+            class="fas fa-arrow-right"></i></a>
+        <a href="https://github.com/Isabel957/cesar" target="_blank"><i class="fab fa-github icon-github"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- jquery cdn link  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- typed.js cdn link  -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <!-- custom js file link  -->
+  <script src="./js/main.js"></script>
+
 </body>
+
 </html>
