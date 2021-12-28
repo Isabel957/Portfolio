@@ -36,7 +36,7 @@ $(document).ready(function () {
 
 });
 const typed = new Typed('.typed', {
-  strings: ['<i class="text">Isabel Tello</i>', '<i class="text">Maquetadora web</i>', '<i class="text">Desarrolladora frontend</i>'],
+  strings: ['<i class="text">Isabel Tello</i>', '<i class="text">Web Designer</i>', '<i class="text">Frontend Developer</i>'],
   typeSpeed: 75,
   startDelay: 300,
   backSpeed: 75,

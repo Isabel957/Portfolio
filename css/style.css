@@ -131,7 +131,7 @@ header #menu{
     cursor: pointer;
     display: none;
 }
-/*Section Home*/
+/* section home */
 .home{
   width: 90%;
   margin: 0 auto;
@@ -182,35 +182,40 @@ header #menu{
   background: #081D6A;
   border: 2px solid #081D6A
 }
-/*section projects*/
+h2{
+  text-align: center;
+  font-size: 45px;
+  padding: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+/* section projects */
 .projects{
   background: #009CDA;
-  margin: 100px 0 0 0;
+  padding: 50px;
 }
 .projects h2{
-  text-align: center;
   color: #fff;
-  font-size: 35px;
-  padding: 10px;
-  text-transform: uppercase;
-
+  margin-bottom: 30px;
 }
 .cards{
   display: flex;
-  justify-content: center;
 }
 .card{
   background: #fff;
   width: 300px;
-  padding: 30px 10px 10px 10px;
-  margin: 40px auto;
+  padding: 30px 0;
+  margin: 50px auto;
   border-radius: 5px;
   color: #081D6A;
   position: relative;
   text-align: center;
+  box-shadow: 2px 2px 2px 1px rgba(0,0,0,.3);
 }
+
 .card p{
-  font-size: 16px;
+  font-size: 18px;
+  margin: 10px;
   text-transform: capitalize;
 }
 .card a{
@@ -232,7 +237,108 @@ header #menu{
 .card .icon-github:hover{
   color: #081D6A;
 }
-/*Media queries*/
+
+/* section skills */
+.skills{
+  width: 85%;
+  margin: 50px auto;
+}
+.skills h2{
+  color: #081D6A;
+  margin-bottom: 20px;
+}
+.skills i{
+  font-size: 150px;
+  margin: 10px;
+}
+.skills .icons{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  margin: 0 auto;
+}
+.icons div{
+  width: 230px;
+  height: 250px;
+  text-align: center;
+
+}
+.icons div img{
+  width: 80px;
+}
+
+.fa-html5{
+  color: #E96228;
+}
+.fa-css3-alt{
+  color: #264DE4;
+}
+.fa-js{
+  color: #FEDE43;
+  background: #000;
+}
+.fa-php{
+  background: #8993C1;
+}
+.fa-wordpress{
+  color: #207196;
+}
+.fa-bootstrap{
+  color: #5A3A7B;
+}
+.fa-git{
+  color: #3B2C00;
+}
+.fa-figma{
+  color: yellow;
+  border: 2px solid tomato;
+  background: tomato;
+}
+/* media queries  */
+
+@media (max-width:768px){
+
+    header #menu{
+        display: block;
+    }
+    header .navbar{
+        position: fixed;
+        top:-120%; left:0;
+        width:100%;
+        background:#fff;
+        opacity: 0;
+    }
+
+    header .navbar ul{
+        padding:2rem 0;
+        flex-flow: column;
+        justify-content: center;
+    }
+
+    header .navbar ul li a{
+        font-size: 2.5rem;
+        color:#333;
+        display: block;
+        margin:1rem 0;
+    }
+
+    header .navbar ul li a::before{
+        background:#333;
+    }
+
+    .fa-times{
+        transform: rotate(180deg);
+    }
+
+    header .navbar.nav-toggle{
+        top:7.4rem;
+        opacity: 1;
+    }
+
+
+}
+
 @media (max-width: 630px) {
   .presentation{
     flex-direction: column;
@@ -247,4 +353,11 @@ header #menu{
   .cards{
     flex-direction: column;
   }
+}
+@media (max-width:500px){
+
+    html{
+        font-size: 50%;
+    }
+
 }
